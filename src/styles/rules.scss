@@ -1,0 +1,53 @@
+@import "../styles/variables.scss";
+
+@mixin rules-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $overlay;
+}
+
+@mixin rules-displaybox ($border-radius, $font-size) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    color: white;
+    background-color: $rules;
+    border-radius: $border-radius;
+    font-size: $font-size;
+}
+
+@mixin rules-close-btn ($border) {
+    display: flex;
+    justify-content: end;
+    color: white;
+    background-color: $rules-close-btn;
+    border: $border solid $rules-close-btn-border;
+    font-weight: 600;
+    border-radius: $border;
+    &:hover {
+        background-color: $rules-close-btn-hover;
+    }
+}
+
+
+@mixin rules-open-btn ($display-size, $font-size) {
+    height: $display-size;
+    width: $display-size;
+    background-color: $rules-btn;
+    font-size: $font-size;
+    font-weight: 600;
+    border-radius: 100%;
+    color: $rules-btn-txt;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background-color: $rules-btn-hover
+    }
+}

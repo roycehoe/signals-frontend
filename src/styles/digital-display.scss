@@ -1,0 +1,44 @@
+@import "src/styles/variables.scss";
+
+@mixin display-header-txt ($border-radius, $font-size, $line-height) {
+    color: $digital-display-header-txt;
+    font-weight: bold;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: uppercase;
+    background-color: $digital-display-header;
+    padding-left: $border-radius;
+    padding-right: $border-radius;
+    border-radius: $border-radius $border-radius 0px 0px;
+}
+
+@mixin display-body-txt ($padding, $font-size) {
+    position: relative;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    font-family: DSEG14_Classic;
+    font-size: $font-size;
+    color: $digital-display-red-txt;
+}
+
+@mixin display-screen($border, $border-radius) {
+    position: relative;
+    border: $border solid transparent;
+    border-radius: 0px $border-radius $border-radius $border-radius;
+    background: $digital-display-inner;
+    background-clip: padding-box;
+
+    &:after {
+        position: absolute;
+        top: - $border;
+        left: -$border;
+        right: -$border;
+        bottom: -$border;
+        background: linear-gradient($digital-display-border,
+                $digital-display-border-middle 80%,
+                $digital-display-border-bottom);
+        content: "";
+        z-index: -1;
+        border-radius: 0px $border-radius $border-radius $border-radius;
+    }
+}

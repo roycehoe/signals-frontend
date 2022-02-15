@@ -1,0 +1,64 @@
+@mixin button($width, $height) {
+    box-sizing: border-box;
+    width: $width;
+    height: $height;
+}
+
+@mixin button-border($border, $border-radius, $top-color, $color, $bottom-color, $hover-color) {
+    position: relative;
+    border: $border solid transparent;
+    border-radius: $border-radius;
+    background: $color;
+    background-clip: padding-box;
+
+    &:after {
+        position: absolute;
+        top: - $border;
+        left: -$border;
+        right: -$border;
+        bottom: -$border;
+        background: linear-gradient($top-color,
+                $color 80%,
+                $bottom-color);
+        content: "";
+        z-index: -1;
+        border-radius: $border-radius;
+        filter: drop-shadow(0px 4px 4px $drop-shadow)
+    }
+    &:active {
+        &:after {
+        position: absolute;
+        top: - $border;
+        left: -$border;
+        right: -$border;
+        bottom: -$border;
+        background: linear-gradient($bottom-color,
+                $color 20%,
+                $top-color);
+        content: "";
+        z-index: -1;
+        border-radius: $border-radius;
+        filter: drop-shadow(0px -4px -4px $drop-shadow)
+        }
+    }
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+
+@mixin button-border-red($border, $border-radius) {
+    @include button-border($border, $border-radius, $red-btn-top, $red-btn, $red-btn-bottom, $red-btn-hover)
+}
+
+@mixin button-border-green($border, $border-radius) {
+    @include button-border($border, $border-radius, $green-btn-top, $green-btn, $green-btn-bottom, $green-btn-hover)
+}
+
+@mixin button-border-gold($border, $border-radius) {
+    @include button-border($border, $border-radius, $gold-btn-top, $gold-btn, $gold-btn-bottom, $gold-btn-hover)
+}
+
+@mixin button-border-silver($border, $border-radius) {
+    @include button-border($border, $border-radius, $silver-btn-top, $silver-btn, $silver-btn-bottom, $silver-btn-hover)
+}
