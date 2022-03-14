@@ -1,11 +1,28 @@
-# Vue 3 + Typescript + Vite
+# Overview
+https://signals.fancybinary.sg/
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Frontend for my hilo game, built with Vue and Typescript
 
-## Recommended IDE Setup
+# Game logic
+ - Implement Axios client to make API calls to application backend
+ - Utilize backend error codes to generate custom game error messages
+ - Use Vue.js to build game application components
+ - Use vue-router to authenticate users based on their JWT token
+ - Utilize Typescript to implement Typing and Interfaces
+ - Implement enums to elucidate error codes and error messages used
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+# CSS
+ - Built responsive web design without the use of any CSS components or frameworks
+ - Utilized BEM methodology when creating CSS classes
 
-## Type Support For `.vue` Imports in TS
+# Design
+ - Used Figma to protoype website design across various screensizes
+ - Used photoshop to create custom game logo and textured game table
+ - Obtained and implemented stock videos from free websites for login page video background
+ - Obtained and implemented playing card images from open sourced projects
+ - Obtained and implemented button sounds and card dealing sounds from open sourced projects
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+# Deployment
+ - Used Docker to dockerize my application for deployment
+ - Used DigitalOcean to deploy application on a virtual private server
+ - Used Cloudflare to set up a DNS to redirect users from my application domain name to my virtual private server
