@@ -18,6 +18,7 @@ Frontend for my hilo game, built with Vue and Typescript
 
 # Design
  - Used [Figma](https://www.figma.com/) to protoype website design across various screensizes
+ - Used [Figma to create a prototype design](https://www.figma.com/community/file/1085180273187267171) for my website across different screensizes
  - Used photoshop to create custom game logo and textured game table
  - Obtained and implemented stock videos from free online libraries for game login page
  - Obtained and implemented playing card images from free online libraries
