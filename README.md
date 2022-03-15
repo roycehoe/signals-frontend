@@ -2,6 +2,7 @@
 https://signals.fancybinary.sg/
 
 Frontend for my hilo game, built with Vue and Typescript
+
 Backend repo: https://github.com/roycehoe/signals-backend
 
 # Game logic
